@@ -36,13 +36,17 @@ export default function NewNote() {
     setIsLoading(true);
 
     try {
-      await createNote({ content });
+      const attachment = file.current ? await s3Upload(file.current) : null;
+
+      await createNote({ content, attachment });
       history.push("/");
     } catch (e) {
       onError(e);
+      console.log(e)
       setIsLoading(false);
     }
   }
+
 
   function createNote(note) {
     return API.post("notes", "/notes", {
