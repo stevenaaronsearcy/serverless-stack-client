@@ -1,17 +1,19 @@
 body {
   margin: 0;
-  padding: 0;
+  padding: 0px;
   color: #333;
   font-size: 16px;
-  background-image: url("./mainbg.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   background-size: cover;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   font-family: "Open Sans", sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: "PT Serif", serif;
+h1, h3, h4, h5, h6 {
+  font-family: "Source Sans Pro", serif;
 }
 
 select.form-control,
@@ -21,5 +23,13 @@ input.form-control {
 }
 input[type=file] {
   width: 100%;
+}
+
+
+#thetitle {
+  margin-top: 50px;
+  color: rgb(22, 22, 23);
+  font-size: 45px;
+  font-weight: 600;
 }
 
