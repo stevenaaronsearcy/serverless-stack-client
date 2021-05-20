@@ -7,6 +7,11 @@ import { BrowserRouter as Router } from "react-router-dom";
 import Amplify from "aws-amplify";
 import config from "./config";
 import "bootstrap/dist/css/bootstrap.min.css";
+import ReactGA from "react-ga";
+
+
+ReactGA.initialize("UA-197581353-1"); // add your tracking id here.
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 
 Amplify.configure({
