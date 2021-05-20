@@ -1,7 +1,7 @@
 const config = {
   s3: {
     REGION: "us-east-2",
-    BUCKET: "notetaking-app-upload",
+    BUCKET: "notetakings-app-upload",
   },
   apiGateway: {
     REGION: "us-east-2",

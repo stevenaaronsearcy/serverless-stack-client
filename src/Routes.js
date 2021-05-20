@@ -1,6 +1,5 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
-import Portfolio from "./containers/Portfolio";
 import Home from "./containers/Home";
 import NotFound from "./containers/NotFound";
 import Login from "./containers/Login";
@@ -10,35 +9,41 @@ import Notes from "./containers/Notes";
 import Settings from "./containers/Settings";
 import AuthenticatedRoute from "./components/AuthenticatedRoute";
 import UnauthenticatedRoute from "./components/UnauthenticatedRoute";
+import Portfolio from "./containers/Portfolio";
 
-export default function Routes() {
+
+
+const Routes = () => {
   return (
-    <Switch>
-      <Route exact path="/portfolio">
-        <Portfolio />
+      <Switch>
+      <Route exact path ="/portfolio">
+        <Portfolio/>
       </Route>
-      <Route exact path="/">
-        <Home />
-      </Route>
-      <UnauthenticatedRoute exact path="/login">
-        <Login />
-      </UnauthenticatedRoute>
-      <UnauthenticatedRoute exact path="/signup">
-        <Signup />
-      </UnauthenticatedRoute>
-      <AuthenticatedRoute exact path="/settings">
-        <Settings />
-      </AuthenticatedRoute>
-      <AuthenticatedRoute exact path="/notes/new">
-        <NewNote />
-      </AuthenticatedRoute>
-      <AuthenticatedRoute exact path="/notes/:id">
-        <Notes />
-      </AuthenticatedRoute>
-      {/* Finally, catch all unmatched routes */}
-      <Route>
-        <NotFound />
-      </Route>
-    </Switch>
+        <Route exact path ="/">
+          <Home />
+        </Route>
+        <UnauthenticatedRoute exact path="/login">
+          <Login />
+        </UnauthenticatedRoute>
+        <UnauthenticatedRoute exact path="/signup">
+          <Signup />
+        </UnauthenticatedRoute>
+        <AuthenticatedRoute exact path="/settings">
+          <Settings />
+        </AuthenticatedRoute>
+        <AuthenticatedRoute exact path="/notes/new">
+          <NewNote />
+        </AuthenticatedRoute>
+        <AuthenticatedRoute exact path="/notes/:id">
+          <Notes />
+        </AuthenticatedRoute>
+        {/* Finally, catch all unmatched routes */}
+        <Route>
+          <NotFound />
+        </Route>
+      </Switch>
+    
   );
 }
+
+export default Routes
