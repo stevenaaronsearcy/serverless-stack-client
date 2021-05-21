@@ -1,11 +1,11 @@
 import React from "react";
-import NotesNavbar from "./NotesNavbar";
+import NewNavbar from "./NewNavbar"
 
 
 function Navbar() {
     return (
       <div>
-        <NotesNavbar />
+        <NewNavbar />
       </div>
     );
 }
