@@ -118,6 +118,7 @@ export default function Notes() {
   }
 
   return (
+    <div className="App container py-3">
     <div className="Notes">
       {note && (
         <Form onSubmit={handleSubmit}>
@@ -163,6 +164,7 @@ export default function Notes() {
           </LoaderButton>
         </Form>
       )}
+    </div>
     </div>
   );
 }

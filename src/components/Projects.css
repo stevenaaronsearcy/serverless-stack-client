@@ -1,0 +1,12 @@
+#mock {
+    height:auto;
+    max-width: 200px;
+}
+
+.grow { 
+transition: all .4s ease-in-out; 
+}
+
+.grow:hover { 
+transform: scale(1.8); 
+}

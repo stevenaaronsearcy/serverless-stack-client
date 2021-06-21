@@ -1,0 +1,22 @@
+#card2 {
+    background-color: transparent;
+    border: solid;
+    border-color: white;
+    color: white;
+}
+
+#utlogo {
+    height: auto;
+    max-width: 50px;
+    padding-left: 10px;
+}
+
+#school {
+    font-size: larger;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #edc139;
+}
+
+#degree {
+    font-style: italic;
+}

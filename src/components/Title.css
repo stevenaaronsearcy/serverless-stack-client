@@ -1,0 +1,15 @@
+#fullstack {
+    font-size: 20px;
+    font-family: 'Source Sans Pro';
+    font-weight: 600;
+}
+
+
+
+#titlebutton {
+    font-family: 'Source Sans Pro';
+    text-transform: capitalize;
+    color: white;
+    border-color: #edc139;
+    border-width: 2px;
+}

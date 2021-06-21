@@ -34,6 +34,8 @@ export default function Login() {
   }
 
   return (
+    <div className="App container py-3">
+    <div><h1>Hello, please login or signup to take some notes!</h1></div>
     <div className="Login">
       <Form onSubmit={handleSubmit}>
         <Form.Group size="lg" controlId="email">
@@ -64,5 +66,7 @@ export default function Login() {
         </LoaderButton>
       </Form>
     </div>
+    </div>
+    
   );
 }

@@ -15,6 +15,8 @@ import IconButton from "@material-ui/core/IconButton";
 // import MenuIcon from "@material-ui/icons/Menu";
 import { Home } from "@material-ui/icons";
 import "./NewNavbar.css";
+import { ThemeProvider as MaterialThemeProvider } from "@material-ui/core/styles";
+import {materialTheme} from "../../src/theme";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -22,6 +24,7 @@ const useStyles = makeStyles((theme) => ({
   },
   menuButton: {
     marginRight: theme.spacing(2),
+    flexGrow: 2
   },
   title: {
     flexGrow: 1,
@@ -60,45 +63,50 @@ export default function ButtonAppBar() {
   return (
     !isAuthenticating && (
       <div className={classes.root}>
-        <AppBar position="static">
-          <Toolbar>
-            <IconButton
-              edge="start"
-              className={classes.menuButton}
-              color="inherit"
-              aria-label="menu"
-            ></IconButton>
-            <LinkContainer to="/">
-              <IconButton edge="start" color="inherit" aria-label="home">
-                <Home fontSize="large" />
-              </IconButton>
-            </LinkContainer>
-            <Nav activeKey={window.location.pathname}>
-              {isAuthenticated ? (
-                <>
-                  <Button color="inherit" href="/settings" id="button">
-                    settings
-                  </Button>
-                  <Button color="inherit" onClick={handleLogout}>
-                    Logout
-                  </Button>
-                </>
-              ) : (
-                <>
-                  <Button color="inherit" href="/login">
-                    Login
-                  </Button>
-                  <Button color="inherit" href="/signup">
-                    Signup
-                  </Button>
-                </>
-              )}
-            </Nav>
-          </Toolbar>
-        </AppBar>
-        <AppContext.Provider value={{ isAuthenticated, userHasAuthenticated }}>
-          <Routes />
-        </AppContext.Provider>
+        <MaterialThemeProvider theme={materialTheme}>
+          <AppBar position="static" style={{ background: "rgb(1,1,1)" }}>
+            <Toolbar>
+              <IconButton
+                edge="start"
+                className={classes.menuButton}
+                color="inherit"
+                aria-label="menu"
+              ></IconButton>
+              {/* <MenuIcon /> */}
+              <LinkContainer to="/">
+                <IconButton edge="start" color="inherit" aria-label="home">
+                  <Home fontSize="large" />
+                </IconButton>
+              </LinkContainer>
+              <Nav activeKey={window.location.pathname}>
+                {isAuthenticated ? (
+                  <>
+                    <Button color="inherit" href="/settings" id="button">
+                      settings
+                    </Button>
+                    <Button color="inherit" onClick={handleLogout}>
+                      Logout
+                    </Button>
+                  </>
+                ) : (
+                  <>
+                    <Button color="inherit" href="/login">
+                      Login
+                    </Button>
+                    <Button color="inherit" href="/signup">
+                      Signup
+                    </Button>
+                  </>
+                )}
+              </Nav>
+            </Toolbar>
+          </AppBar>
+          <AppContext.Provider
+            value={{ isAuthenticated, userHasAuthenticated }}
+          >
+            <Routes />
+          </AppContext.Provider>
+        </MaterialThemeProvider>
       </div>
     )
   );

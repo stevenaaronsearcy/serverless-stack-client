@@ -6,8 +6,15 @@ import "./Home.css";
 import { API } from "aws-amplify";
 import { BsPencilSquare } from "react-icons/bs";
 import { LinkContainer } from "react-router-bootstrap";
+import Title from "../components/Title";
+import TitleValues from "../components/TitleValues";
+import Skills from "../components/Skills";
+import Projects from "../components/Projects";
+
+
 
 export default function Home() {
+  
   const [notes, setNotes] = useState([]);
   const { isAuthenticated } = useAppContext();
   const [isLoading, setIsLoading] = useState(true);
@@ -64,10 +71,17 @@ export default function Home() {
 
   function renderLander() {
     return (
-      <div className="lander">
-        <h1>NOTEPAD</h1>
-        <p className="text-muted">Let's take some notes :)</p>
-      </div>
+      <React.Fragment>
+        <Title/>
+        <TitleValues/>
+        <Skills/>
+        <Projects/>
+        {/* <TitleCategories/> */}
+        {/* <TitleHowItWorks/>
+        <TitleCTA/>
+        <TitleSmokingHero />
+        <TitleFooter/> */}
+      </React.Fragment>
     );
   }
 

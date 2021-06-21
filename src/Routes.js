@@ -9,16 +9,13 @@ import Notes from "./containers/Notes";
 import Settings from "./containers/Settings";
 import AuthenticatedRoute from "./components/AuthenticatedRoute";
 import UnauthenticatedRoute from "./components/UnauthenticatedRoute";
-import Portfolio from "./containers/Portfolio";
+
 
 
 
 const Routes = () => {
   return (
       <Switch>
-      <Route exact path ="/portfolio">
-        <Portfolio/>
-      </Route>
         <Route exact path ="/">
           <Home />
         </Route>

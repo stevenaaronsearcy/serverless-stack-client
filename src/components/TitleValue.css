@@ -1,0 +1,23 @@
+#hello {
+    font-size: 50px;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #edc139;
+}
+
+#pdfbutton {
+     font-family: 'Source Sans Pro';
+    text-transform: capitalize;
+    color: white;
+    border-color: #edc139;
+    border-width: 2px;
+}
+
+#gradlogo {
+    height: auto;
+    max-width: 120px
+}
+
+img {
+    height: auto;
+    max-width:100px
+}
