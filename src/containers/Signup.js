@@ -96,6 +96,7 @@ export default function Signup() {
 
   function renderForm() {
     return (
+      <div className="App container py-3">
       <Form onSubmit={handleSubmit}>
         <Form.Group controlId="email" size="lg">
           <Form.Label>Email</Form.Label>
@@ -133,6 +134,7 @@ export default function Signup() {
           Signup
         </LoaderButton>
       </Form>
+      </div>
     );
   }
 
