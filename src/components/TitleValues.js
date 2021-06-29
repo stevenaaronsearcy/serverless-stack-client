@@ -11,6 +11,7 @@ import BTCard from "./BTCard";
 import UTCard from "./UTCard";
 import logo from "../assets/graduated.svg";
 import {useMediaQuery} from '@material-ui/core';
+import Steven from "../assets/steven.jpg";
 
 const styles = (theme) => ({
   root: {
@@ -64,8 +65,11 @@ function TitleValues(props) {
         <Grid container spacing={2}>
           <Grid item xs={12}>
             <Typography color="primary" align="center" variant="h3" id="hello">
-              Hello, I'm Steven, let's talk.
+              Hello, I'm Steven Searcy, let's talk.
             </Typography>
+          </Grid>
+          <Grid item xs={12} align="center">
+          <img src={Steven} alt="..." id="steven"/>
           </Grid>
           <Grid item xs={12}>
             <Typography
