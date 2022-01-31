@@ -5,7 +5,7 @@ import Grid from "@material-ui/core/Grid";
 import Container from "@material-ui/core/Container";
 import { Typography } from "@material-ui/core";
 import "./TitleValue.css";
-import Pdf from "../pdf/StevenSearcy06:28:21.pdf";
+import Pdf from "../pdf/SAS_Resume_Current.pdf";
 import Button from "@material-ui/core/Button";
 import BTCard from "./BTCard";
 import UTCard from "./UTCard";
@@ -99,7 +99,7 @@ function TitleValues(props) {
               color="primary"
               id="pdfbutton"
               href={Pdf}
-              src="/src/pdf/StevenAaronSearcy.pdf"
+              src="/src/pdf/SAS_Resume_Current.pdf"
               target="_blank"
             >
               Print Resume
